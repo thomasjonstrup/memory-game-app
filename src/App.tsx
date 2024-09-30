@@ -1,6 +1,6 @@
 import {useEffect, useState } from 'react'
-import { Button } from './components/ui/button';
-import { Card } from './components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
 import { Shuffle } from 'lucide-react'
 
 type MemoryCard = {
@@ -25,7 +25,7 @@ const memoryCards: MemoryCard[] = [
   { id: 12, content: '🦊', flipped: false, matched: false },
 ]
 
-function App() {
+const  App = () => {
   const [cards, setCards] = useState<MemoryCard[]>(memoryCards);
   const [flippedCards, setFlippedCards] = useState<number[]>([]);
   const [moves, setMoves] = useState(0);
@@ -113,4 +113,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
